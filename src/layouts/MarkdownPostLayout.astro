@@ -61,8 +61,14 @@ function formatDate(dateString) {
             )}
         </div>
         
-        <div class="markdown-content max-w-xl md:max-w-3xl lg:max-w-4xl text-justify">
+        <div class="markdown-content max-w-xl md:max-w-3xl lg:max-w-4xl">
             <slot />
         </div>
     </article>
+
+    <style>
+        .markdown-content :global(p) {
+            text-align: justify;
+        }
+    </style>
 </MainLayout>
